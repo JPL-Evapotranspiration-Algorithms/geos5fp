@@ -23,10 +23,10 @@ from requests.adapters import HTTPAdapter
 from requests.auth import HTTPBasicAuth
 from urllib3 import Retry
 
-import cl
 import rasters as rt
 from rasters import Raster, RasterGeometry
 from timer import Timer
+import colored_logging as cl
 
 from .downscaling import linear_downscale, DEFAULT_UPSAMPLING, DEFAULT_DOWNSAMPLING, bias_correct
 
