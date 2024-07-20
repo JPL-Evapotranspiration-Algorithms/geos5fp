@@ -15,6 +15,7 @@ classifiers = [
 ]
 dependencies = [
     "affine",
+    "colored-logging",
     "geopandas",
     "numpy",
     "pyproj",
@@ -27,11 +28,13 @@ dependencies = [
     "beautifulsoup4",
     "python-dateutil",
     "matplotlib",
-    "urllib3",
-    "colored-logging @ git+https://github.com/JPL-Evapotranspiration-Algorithms/colored_logging.git"
+    "urllib3"
 ]
 
-requires-python = ">=3.10"
+requires-python = ">=3.11"
 
 [tool.setuptools.package-data]
 geos5fp = ["*.txt"]
+
+[project.urls]
+"Homepage" = "https://github.com/JPL-Evapotranspiration-Algorithms/geos5fp"
