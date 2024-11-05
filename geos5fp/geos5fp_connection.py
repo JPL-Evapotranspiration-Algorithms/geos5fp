@@ -8,7 +8,7 @@ from os.path import expanduser, join, exists, getsize, dirname
 from shutil import move
 from time import sleep
 from typing import List, Union, Any
-
+import posixpath
 import colored_logging as cl
 import numpy as np
 import pandas as pd
@@ -18,11 +18,14 @@ import requests
 from dateutil import parser
 from rasters import Raster, RasterGeometry
 
-from geos5fp import DEFAULT_WORKING_DIRECTORY, logger, DEFAULT_DOWNLOAD_DIRECTORY, DEFAULT_PRODUCTS_DIRECTORY, \
-    GEOS5FPYearNotAvailable, GEOS5FPMonthNotAvailable, HTTP_listing, GEOS5FPDayNotAvailable, GEOS5FPGranule, \
-    GEOS5FPGranuleNotAvailable, Timer, FailedGEOS5FPDownload, DEFAULT_USE_HTTP_LISTING, SM_CMAP, NDVI_CMAP, \
-    DEFAULT_COARSE_CELL_SIZE_METERS, linear_downscale, DEFAULT_UPSAMPLING, DEFAULT_DOWNSAMPLING, bias_correct
+from .constants import *
+from .exceptions import *
+from .HTTP_listing import HTTP_listing
+from .geos5fp_granule import GEOS5FPGranule
+from .timer import Timer
+from .downscaling import linear_downscale, bias_correct
 
+logger = logging.getLogger(__name__)
 
 class GEOS5FPConnection:
     logger = logging.getLogger(__name__)

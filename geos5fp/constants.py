@@ -28,3 +28,6 @@ NDVI_CMAP = LinearSegmentedColormap.from_list(
         "#325e32"
     ]
 )
+
+DEFAULT_UPSAMPLING = "mean"
+DEFAULT_DOWNSAMPLING = "cubic"
