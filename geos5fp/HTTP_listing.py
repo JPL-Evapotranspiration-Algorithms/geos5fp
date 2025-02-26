@@ -4,7 +4,7 @@ from requests.adapters import HTTPAdapter
 from requests.auth import HTTPBasicAuth
 from urllib3 import Retry
 
-from geos5fp import DEFAULT_READ_TIMEOUT, DEFAULT_RETRIES
+from .constants import DEFAULT_READ_TIMEOUT, DEFAULT_RETRIES
 
 
 def HTTP_listing(
