@@ -28,8 +28,6 @@ from .downscaling import linear_downscale, bias_correct
 logger = logging.getLogger(__name__)
 
 class GEOS5FPConnection:
-    logger = logging.getLogger(__name__)
-
     DEFAULT_URL_BASE = "https://portal.nccs.nasa.gov/datashare/gmao/geos-fp/das"
     DEFAULT_TIMEOUT_SECONDS = 500
     DEFAULT_RETRIES = 3
@@ -412,8 +410,8 @@ class GEOS5FPConnection:
                 if retries == 0:
                     raise e
 
-                self.logger.warning(e)
-                self.logger.warning(f"waiting {wait_seconds} for M2M retry")
+                logger.warning(e)
+                logger.warning(f"waiting {wait_seconds} for M2M retry")
                 sleep(wait_seconds)
                 continue
 
