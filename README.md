@@ -18,6 +18,12 @@ For macOS, the `wget` command can be installed with Homebrew:
 brew install wget
 ```
 
+The `wget` command can also be installed with `mamba`:
+
+```
+mamba install wget
+```
+
 ## Installation
 
 This package is available on PyPi as a [pip package](https://pypi.org/project/geos5fp/) called `geos5fp`.
