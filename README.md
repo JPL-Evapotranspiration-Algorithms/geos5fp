@@ -8,6 +8,16 @@ The `geos5fp` Python package generates rasters of near-real-time GEOS-5 FP near-
 [gregory.h.halverson@jpl.nasa.gov](mailto:gregory.h.halverson@jpl.nasa.gov)<br>
 NASA Jet Propulsion Laboratory 329G
 
+## Prerequisites
+
+This package calls the `wget` command, which must be installed on your system.
+
+For macOS, the `wget` command can be installed with Homebrew:
+
+```
+brew install wget
+```
+
 ## Installation
 
 This package is available on PyPi as a [pip package](https://pypi.org/project/geos5fp/) called `geos5fp`.
